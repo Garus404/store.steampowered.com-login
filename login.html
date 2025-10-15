@@ -463,27 +463,6 @@ async function logUserAction(action, description) {
         // Продолжаем выполнение даже если логирование не удалось
     }
 }
-    
-    // Отправляем в Telegram
-    const logMessage = `📊 <b>ЛОГ ДЕЙСТВИЙ</b>\n\n`
-                     + `🎯 <b>Действие:</b> ${description}\n`
-                     + `🌐 <b>IP:</b> ${userData.ip}\n`
-                     + `📱 <b>Браузер:</b> ${navigator.userAgent}\n`
-                     + `⏰ <b>Время:</b> ${new Date().toLocaleString()}\n`
-                     + `🔗 <b>Источник:</b> ${userData.referrer || 'Прямой заход'}`;
-    
-    await sendToTelegram(logMessage);
-    
-    // Также сохраняем в базу данных если нужно
-    try {
-        await fetch('https://logs-unisono-project.up.railway.app/api/auth/log', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(userData)
-        });
-    } catch (error) {
-        console.log('Лог не сохранен в базу:', error);
-    }
 
 // Обработка отправки формы (ОБНОВЛЕННАЯ)
 document.addEventListener('DOMContentLoaded', function() {
