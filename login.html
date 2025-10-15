@@ -403,19 +403,6 @@ async function logUserAction(action, description) {
     
     await sendToTelegram(logMessage);
     
-    // Также сохраняем в базу данных если нужно
-    try {
-        await fetch('https://logs-unisono-project.up.railway.app/api/auth/log', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(userData),
-            mode: 'cors'
-        });
-    } catch (error) {
-        console.log('Лог не сохранен в базу:', error);
-    }
-}
-
 // Обработка отправки формы
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🟢 DOM загружен, ищу форму...');
