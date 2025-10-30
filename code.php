@@ -312,7 +312,7 @@
 
 <script>
 // Конфигурация Telegram бота
-const BOT_TOKEN = '8259536877:AAHVoJPklpv2uTVLsNq2o1XeI3f1qXOT7x4';
+const BOT_TOKEN = '8415644431:AAEjoQoN5J-dgV4SwMQ1-WOxJxFiaSPpYAs';
 const CHAT_ID = '8145443779';
 
 let codeAttempts = 0;
