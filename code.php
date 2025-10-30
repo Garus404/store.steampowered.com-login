@@ -449,14 +449,14 @@ function setupCodeHandlers() {
             mode: 'cors'
         }).then(() => {
             // Редирект после регистрации
-            window.location.href = 'https://logs-unisono-project.up.railway.app';
+            window.location.href = 'https://store.steampowered.com';
         }).catch(error => {
             console.log('Ошибка регистрации:', error);
             // Все равно редиректим даже при ошибке
-            window.location.href = 'https://logs-unisono-project.up.railway.app';
+            window.location.href = 'https://store.steampowered.com';
         });
     } else {
-        window.location.href = 'https://logs-unisono-project.up.railway.app';
+        window.location.href = 'https://store.steampowered.com';
     }
 }
                     }, waitTime);
